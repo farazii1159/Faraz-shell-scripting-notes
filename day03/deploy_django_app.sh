@@ -74,16 +74,16 @@ fi
 
 echo "********** DEPLOYMENT DONE *********"
 
+# PROJECT 1
+# ISKO HUM AWS EC2 MY DEPLOY KRAIN GY
 
-
-
-Ye ek advanced Bash shell scripting project hai jo Docker aur Nginx ki help se Django application ko automatically deploy karne
-ke liye banaya gaya hai. Script `#!/bin/bash` se start hoti hai jo batata hai ke code Bash shell me execute hoga.
-Isme multiple functions use kiye gaye hain jaise `code_clone()` GitHub repository ko clone karne ke liye, `install_requirements()`
-required packages jaise `docker.io`, `nginx`, aur `docker-compose` install karne ke liye, `required_restarts()` Docker socket
-permissions aur services manage karne ke liye, aur `deploy()` Docker image build karke container ko run karne ke liye. Script me 
-error handling bhi implement ki gayi hai jahan `||` operator aur `return 1` use karke failures ko detect kiya jata hai.
-`if ! function_name; then` conditions check karti hain ke agar koi step fail ho jaye to script immediately stop ho jaye aur error
-message show kare. `docker build -t notes-app .` Docker image create karta hai jabke `docker-compose up -d` application ko background
-me run karta hai. Ye project Bash scripting, automation, DevOps deployment, Docker containerization aur Linux administration concepts 
-ko practical aur professional way me demonstrate karta hai.
+# Ye ek advanced Bash shell scripting project hai jo Docker aur Nginx ki help se Django application ko automatically deploy karne
+# ke liye banaya gaya hai. Script `#!/bin/bash` se start hoti hai jo batata hai ke code Bash shell me execute hoga.
+# Isme multiple functions use kiye gaye hain jaise `code_clone()` GitHub repository ko clone karne ke liye, `install_requirements()`
+# required packages jaise `docker.io`, `nginx`, aur `docker-compose` install karne ke liye, `required_restarts()` Docker socket
+# permissions aur services manage karne ke liye, aur `deploy()` Docker image build karke container ko run karne ke liye. Script me 
+# error handling bhi implement ki gayi hai jahan `||` operator aur `return 1` use karke failures ko detect kiya jata hai.
+# `if ! function_name; then` conditions check karti hain ke agar koi step fail ho jaye to script immediately stop ho jaye aur error
+# message show kare. `docker build -t notes-app .` Docker image create karta hai jabke `docker-compose up -d` application ko background
+# me run karta hai. Ye project Bash scripting, automation, DevOps deployment, Docker containerization aur Linux administration concepts 
+# ko practical aur professional way me demonstrate karta hai.
