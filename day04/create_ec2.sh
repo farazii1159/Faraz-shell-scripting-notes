@@ -91,26 +91,26 @@ main() {
 main "$@"
 
 
+# PROJECT 2
 
 
 
-
-Ye ek advanced Bash shell scripting automation project hai jo AWS CLI ki help se automatically Amazon EC2 instance
-create karne ke liye banaya gaya hai. Script `#!/bin/bash` se start hoti hai jo batata hai ke ye Bash shell me 
-execute hogi, aur `set -euo pipefail` script ko secure aur reliable banata hai kyunke agar koi command fail ho,
-undefined variable use ho, ya pipeline me error aaye to script immediately stop ho jati hai. Sabse pehle `check_awscli()` 
-function check karta hai ke system me AWS CLI installed hai ya nahi using `command -v aws`; agar installed na ho 
-to error message show hota hai aur script exit kar jati hai. `install_awscli()` function AWS CLI v2 ko automatically 
-download aur install karta hai using `curl`, `unzip`, aur `sudo ./aws/install`, phir installation verify karne ke
-liye `aws --version` chalata hai aur temporary files delete kar deta hai. `wait_for_instance()`
-function continuously AWS se EC2 instance ki state check karta rehta hai using `aws ec2 describe-instances` command
- aur `sleep 10` ki help se har 10 seconds baad verify karta hai ke instance `running` state me aaya ya nahi.
-`create_ec2_instance()` function main deployment logic hai jahan AMI ID, instance type, key pair, subnet ID,
- security group aur instance name jaise parameters use karke `aws ec2 run-instances` command ke through 
-EC2 instance create kiya jata hai; agar instance successfully create ho jaye to uska Instance ID save hota hai aur
- phir `wait_for_instance()` function call hota hai taake instance fully running state me aa jaye.
-`main()` function poori script ko control karta hai jahan pehle AWS CLI check/install hoti hai, phir EC2 creation
- ke liye variables set kiye jate hain jaise `t2.micro` instance type aur custom instance name `"Shell-Script-EC2-Demo"`,
-aur akhir me `create_ec2_instance()` function call hota hai. Overall ye script Bash scripting, Linux automation,
-AWS CLI, cloud infrastructure provisioning, error handling aur DevOps automation concepts ko practical aur professional 
-way me demonstrate karti hai.
+# Ye ek advanced Bash shell scripting automation project hai jo AWS CLI ki help se automatically Amazon EC2 instance
+# create karne ke liye banaya gaya hai. Script `#!/bin/bash` se start hoti hai jo batata hai ke ye Bash shell me 
+# execute hogi, aur `set -euo pipefail` script ko secure aur reliable banata hai kyunke agar koi command fail ho,
+# undefined variable use ho, ya pipeline me error aaye to script immediately stop ho jati hai. Sabse pehle `check_awscli()` 
+# function check karta hai ke system me AWS CLI installed hai ya nahi using `command -v aws`; agar installed na ho 
+# to error message show hota hai aur script exit kar jati hai. `install_awscli()` function AWS CLI v2 ko automatically 
+# download aur install karta hai using `curl`, `unzip`, aur `sudo ./aws/install`, phir installation verify karne ke
+# liye `aws --version` chalata hai aur temporary files delete kar deta hai. `wait_for_instance()`
+# function continuously AWS se EC2 instance ki state check karta rehta hai using `aws ec2 describe-instances` command
+#  aur `sleep 10` ki help se har 10 seconds baad verify karta hai ke instance `running` state me aaya ya nahi.
+# `create_ec2_instance()` function main deployment logic hai jahan AMI ID, instance type, key pair, subnet ID,
+#  security group aur instance name jaise parameters use karke `aws ec2 run-instances` command ke through 
+# EC2 instance create kiya jata hai; agar instance successfully create ho jaye to uska Instance ID save hota hai aur
+#  phir `wait_for_instance()` function call hota hai taake instance fully running state me aa jaye.
+# `main()` function poori script ko control karta hai jahan pehle AWS CLI check/install hoti hai, phir EC2 creation
+#  ke liye variables set kiye jate hain jaise `t2.micro` instance type aur custom instance name `"Shell-Script-EC2-Demo"`,
+# aur akhir me `create_ec2_instance()` function call hota hai. Overall ye script Bash scripting, Linux automation,
+# AWS CLI, cloud infrastructure provisioning, error handling aur DevOps automation concepts ko practical aur professional 
+# way me demonstrate karti hai.
